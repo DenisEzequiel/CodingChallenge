@@ -24,16 +24,15 @@ namespace CodingChallenge.Data.Classes
                 // HEADER
                 sb.Append(idioma.Titulo());
 
-                var types = formas.GroupBy(x => x.GetType()).Select(g => new { Type = g.Key, Count = g.Count() }).ToList();
+                var tipos = formas.GroupBy(x => x.GetType()).Select(g => new { Type = g.Key, Count = g.Count() }).ToList();
 
                 decimal totalArea = 0;
                 decimal totalPerimetro = 0;
-                foreach (var result in types)
+                foreach (var tipo in tipos)
                 {
-                    decimal areaDelTipo = formas.Where(x =>x.GetType() == result.Type).Sum(x => x.CalcularArea());  
-                    decimal perimetroDelTipo = formas.Where(x => x.GetType() == result.Type).Sum(x => x.CalcularPerimetro());
-                    int cantidadDelTipo = formas.Where(x => x.GetType() == result.Type).Count();
-                    sb.Append(ObtenerLinea(cantidadDelTipo, areaDelTipo, perimetroDelTipo, idioma, formas.Where(x => x.GetType() == result.Type).First()));
+                    decimal areaDelTipo = formas.Where(x =>x.GetType() == tipo.Type).Sum(x => x.CalcularArea());  
+                    decimal perimetroDelTipo = formas.Where(x => x.GetType() == tipo.Type).Sum(x => x.CalcularPerimetro());
+                    sb.Append(ObtenerLinea(tipo.Count, areaDelTipo, perimetroDelTipo, idioma, formas.Where(x => x.GetType() == tipo.Type).First()));
                     totalArea += areaDelTipo;
                     totalPerimetro += perimetroDelTipo;
                 }
