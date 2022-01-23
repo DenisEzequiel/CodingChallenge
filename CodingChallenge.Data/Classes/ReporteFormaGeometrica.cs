@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CodingChallenge.Data.Classes.FormasGeometricas;
+using CodingChallenge.Data.Classes.Idiomas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

@@ -58,6 +58,7 @@
     <Compile Include="Classes\FormasGeometricas\Circulo.cs" />
     <Compile Include="Classes\FormasGeometricas\Cuadrado.cs" />
     <Compile Include="Classes\FormasGeometricas\FormaGeometrica.cs" />
+    <Compile Include="Classes\Idiomas\Frances.cs" />
     <Compile Include="Classes\Idiomas\Ingles.cs" />
     <Compile Include="Classes\Idiomas\ReporteIdioma.cs" />
     <Compile Include="Classes\ReporteFormaGeometrica.cs" />

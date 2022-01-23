@@ -7,51 +7,51 @@ using System.Threading.Tasks;
 
 namespace CodingChallenge.Data.Classes.Idiomas
 {
-    public class Castellano : ReporteIdioma
+    public class Frances : ReporteIdioma
     {
         public override string FiguraCirculo(int cantidad)
         {
-            return cantidad == 1 ? "Círculo" : "Círculos";
+            return cantidad == 1 ? "Cercle" : "Cercles";
         }
 
         public override string FiguraCuadrado(int cantidad)
         {
-            return cantidad == 1 ? "Cuadrado" : "Cuadrados";
+            return cantidad == 1 ? "Carré" : "Carrés";
         }
 
         public override string FiguraRectangulo(int cantidad)
         {
-            return cantidad == 1 ? "Rectangulo" : "Rectangulos";
+            return cantidad == 1 ? "Rectangle" : "Rectangles";
         }
 
         public override string FiguraTrapecio(int cantidad)
         {
-            return cantidad == 1 ? "Trapecio" : "Trapecios";
+            return cantidad == 1 ? "Trapèze" : "Trapèzes";
         }
 
         public override string FiguraTrianguloEquilatero(int cantidad)
         {
-            return cantidad == 1 ? "Triángulo" : "Triángulos";
+            return cantidad == 1 ? "Triangle" : "Triangles";
         }
 
         public override string Footer(int cantidadTotal, decimal areaTotal, decimal perimetroTotal)
         {
-            return "TOTAL:<br/>" + cantidadTotal + " formas Perimetro "+perimetroTotal.ToString("#.##") + " Area "+areaTotal.ToString("#.##");
+            return "TOTAL:<br/>" + cantidadTotal + " formes Périmètre " + perimetroTotal.ToString("#.##") + " Zone " + areaTotal.ToString("#.##");
         }
 
         public override string ListaVacia()
         {
-            return "<h1>Lista vacía de formas!</h1>";
+            return "<h1>Liste vide de formes!</h1>";
         }
 
-        public override string ObtenerLinea(int cantidad, decimal area, decimal perimetro,FormaGeometrica forma)
+        public override string ObtenerLinea(int cantidad, decimal area, decimal perimetro, FormaGeometrica forma)
         {
-            return $"{cantidad} {forma.ObtenerFigura(this,cantidad)} | Area {area:#.##} | Perimetro {perimetro:#.##} <br/>";
+            return $"{cantidad} {forma.ObtenerFigura(this, cantidad)} | Zone {area:#.##} | Périmètre {perimetro:#.##} <br/>";
         }
 
         public override string Titulo()
         {
-            return "<h1>Reporte de Formas</h1>";
+            return "<h1>Rapport de formes</h1>";
         }
     }
 }

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using CodingChallenge.Data.Classes.FormasGeometricas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodingChallenge.Data.Classes
+namespace CodingChallenge.Data.Classes.Idiomas
 {
     public abstract class ReporteIdioma
     {

@@ -7,12 +7,13 @@
  * TODO: Implementar Trapecio/Rectangulo, agregar otro idioma a reporting.
  * */
 
+using CodingChallenge.Data.Classes.Idiomas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CodingChallenge.Data.Classes
+namespace CodingChallenge.Data.Classes.FormasGeometricas
 {
     public abstract class FormaGeometrica
     {

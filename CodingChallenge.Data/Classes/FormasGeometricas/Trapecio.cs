@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CodingChallenge.Data.Classes.Idiomas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,27 +9,27 @@ namespace CodingChallenge.Data.Classes.FormasGeometricas
 {
     public class Trapecio : FormaGeometrica
     {
-        decimal _baseA;
-        decimal _baseB;
-        decimal _baseC;
-        decimal _baseD;
+        decimal _baseMenor;
+        decimal _baseMayor;
+        decimal _ladoA;
+        decimal _LadoB;
         decimal _altura;
-        public Trapecio(decimal _baseA,decimal _baseB, decimal _baseC, decimal _baseD, decimal _altura)
+        public Trapecio(decimal _baseMenor,decimal _baseMayor, decimal _ladoA, decimal _LadoB, decimal _altura)
         {
-            this._baseA = _baseA;
-            this._baseB = _baseB;
-            this._baseC = _baseC;
-            this._baseD = _baseD;
+            this._baseMenor = _baseMenor;
+            this._baseMayor = _baseMayor;
+            this._ladoA = _ladoA;
+            this._LadoB = _LadoB;
             this._altura = _altura;
         }
         public override decimal CalcularArea()
         {
-            return _altura * ((_baseB + _baseA) / 2);
+            return _altura * ((_baseMenor + _baseMayor) / 2);
         }
 
         public override decimal CalcularPerimetro()
         {
-            return _baseA + _baseB + _baseC + _baseD;
+            return _baseMenor + _baseMayor + _ladoA + _LadoB;
         }
 
         public override string ObtenerFigura(ReporteIdioma idioma, int cantidad)
